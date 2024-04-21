@@ -1,8 +1,13 @@
 package com.example.imsafe;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -12,12 +17,16 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     PagerAdapter pagerAdapter;
+
+
 
 
     @Override
@@ -33,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         pagerAdapter = new PagerAdapter(fm,getLifecycle());
         viewPager2.setAdapter(pagerAdapter);
         //viewPager2.setAdapter(pagerAdapter);
+
+
+        //list
+
+
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -58,5 +72,11 @@ public class MainActivity extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+
+        //list
+
+
+
     }
+
 }
